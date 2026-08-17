@@ -1,0 +1,143 @@
+.sidebar{
+
+    width:270px;
+
+    height:100vh;
+
+    background:#1B1F24;
+
+    color:white;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    padding:25px;
+
+}
+
+.logo{
+
+    font-size:28px;
+
+    margin-bottom:8px;
+
+}
+
+.logo-subtitle{
+
+    color:#9ca3af;
+
+    margin-bottom:30px;
+
+}
+
+.sidebar-btn{
+
+    width:100%;
+
+    border:none;
+
+    padding:14px;
+
+    border-radius:12px;
+
+    background:#2E7D32;
+
+    color:white;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    margin-bottom:30px;
+
+    transition:.3s;
+
+}
+
+.sidebar-btn:hover{
+
+    background:#1B5E20;
+
+}
+
+.sidebar-middle{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+.sidebar-link{
+
+    border:none;
+
+    background:transparent;
+
+    color:white;
+
+    text-align:left;
+
+    font-size:17px;
+
+    padding:14px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.sidebar-link:hover{
+
+    background:#2d333b;
+
+}
+
+.user-box{
+
+    text-align:center;
+
+    padding:12px;
+
+    border-radius:10px;
+
+    background:#2d333b;
+
+    margin-bottom:15px;
+
+}
+
+.logout-btn{
+
+    width:100%;
+
+    border:none;
+
+    padding:14px;
+
+    border-radius:12px;
+
+    background:#d32f2f;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+}
+
+.logout-btn:hover{
+
+    background:#b71c1c;
+
+}

@@ -1,0 +1,18 @@
+.home {
+  text-align: center;
+  margin-top: 120px;
+}
+
+.home h1 {
+  color: green;
+  font-size: 45px;
+}
+
+.home h2 {
+  margin-top: 20px;
+  color: #333;
+}
+
+.home p {
+  font-size: 20px;
+}

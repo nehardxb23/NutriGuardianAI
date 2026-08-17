@@ -1,0 +1,230 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.ai-layout{
+
+    display:flex;
+
+    width:100%;
+
+    height:100vh;
+
+    background:#202123;
+
+}
+
+/* ===========================
+        CHAT SECTION
+=========================== */
+
+.chat-section{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+    background:#343541;
+
+}
+
+/* ===========================
+        HEADER
+=========================== */
+
+.chat-header{
+
+    padding:20px;
+
+    text-align:center;
+
+    border-bottom:1px solid #4a4a4a;
+
+    background:#202123;
+
+}
+
+.chat-header h1{
+
+    color:white;
+
+    font-size:30px;
+
+    margin-bottom:8px;
+
+}
+
+.chat-header p{
+
+    color:#cfcfcf;
+
+    font-size:16px;
+
+}
+
+/* ===========================
+        CHAT AREA
+=========================== */
+
+.chat-messages{
+
+    flex:1;
+
+    overflow-y:auto;
+
+    scroll-behavior:smooth;
+
+}
+
+/* Scrollbar */
+
+.chat-messages::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+.chat-messages::-webkit-scrollbar-thumb{
+
+    background:#666;
+
+    border-radius:10px;
+
+}
+
+.chat-messages::-webkit-scrollbar-track{
+
+    background:#343541;
+
+}
+
+/* ===========================
+      TYPING ANIMATION
+=========================== */
+
+.typing-container{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    padding:25px 30px;
+
+    background:#202123;
+
+}
+
+.typing-avatar{
+
+    width:46px;
+
+    height:46px;
+
+    border-radius:50%;
+
+    background:#2E7D32;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:22px;
+
+}
+
+.typing-box{
+
+    display:flex;
+
+    gap:8px;
+
+}
+
+.typing-box span{
+
+    width:10px;
+
+    height:10px;
+
+    background:white;
+
+    border-radius:50%;
+
+    animation:bounce 1s infinite;
+
+}
+
+.typing-box span:nth-child(2){
+
+    animation-delay:.2s;
+
+}
+
+.typing-box span:nth-child(3){
+
+    animation-delay:.4s;
+
+}
+
+@keyframes bounce{
+
+    0%{
+
+        transform:translateY(0);
+
+        opacity:.4;
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+        opacity:.4;
+
+    }
+
+}
+
+/* ===========================
+        MOBILE
+=========================== */
+
+@media(max-width:900px){
+
+.ai-layout{
+
+    flex-direction:column;
+
+}
+
+.chat-header h1{
+
+    font-size:24px;
+
+}
+
+.chat-header p{
+
+    font-size:14px;
+
+}
+
+}

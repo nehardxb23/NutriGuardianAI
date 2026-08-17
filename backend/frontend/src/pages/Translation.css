@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+}
+
+.translation-layout {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  background: #343541;
+}
+
+.translation-container {
+  flex: 1;
+  padding: 40px;
+  color: white;
+  overflow-y: auto;
+}
+
+.translation-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.translation-header h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.translation-header p {
+  color: #cfcfcf;
+  font-size: 16px;
+}
+
+.translation-form {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 30px;
+  background: #202123;
+  border-radius: 12px;
+}
+
+.translation-form label {
+  display: block;
+  margin-bottom: 8px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.translation-form textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 22px;
+  border: 1px solid #555;
+  border-radius: 8px;
+  background: #343541;
+  color: white;
+  font-size: 16px;
+  resize: vertical;
+  outline: none;
+}
+
+.translation-form textarea:focus {
+  border-color: #2e7d32;
+}
+
+.translation-form select {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 22px;
+  border: 1px solid #555;
+  border-radius: 8px;
+  background: #343541;
+  color: white;
+  font-size: 16px;
+  outline: none;
+}
+
+.translation-form button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  background: #2e7d32;
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.translation-form button:hover {
+  background: #256628;
+}
+
+.translation-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.translation-result {
+  max-width: 750px;
+  margin: 30px auto 0;
+  padding: 25px;
+  background: #202123;
+  border-radius: 12px;
+}
+
+.translation-result h2 {
+  margin-bottom: 15px;
+}
+
+.translated-box {
+  padding: 20px;
+  background: #343541;
+  border-radius: 8px;
+  color: white;
+  font-size: 18px;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+
+@media (max-width: 900px) {
+  .translation-layout {
+    flex-direction: column;
+  }
+
+  .translation-container {
+    padding: 20px;
+  }
+
+  .translation-header h1 {
+    font-size: 26px;
+  }
+}

@@ -1,0 +1,260 @@
+* {
+  box-sizing: border-box;
+}
+
+.agent-layout {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  background: #343541;
+}
+
+.agent-container {
+  flex: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+/* ==========================================
+   Header
+========================================== */
+
+.agent-header {
+  position: relative;
+  padding: 25px;
+  text-align: center;
+  background: #202123;
+  border-bottom: 1px solid #444;
+}
+
+.agent-header h1 {
+  margin: 0 0 8px;
+  font-size: 28px;
+}
+
+.agent-header p {
+  margin: 0;
+  color: #cfcfcf;
+}
+
+.agent-clear-btn {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+
+  padding: 8px 14px;
+
+  border: 1px solid #555;
+  border-radius: 7px;
+
+  background: transparent;
+  color: white;
+
+  cursor: pointer;
+}
+
+.agent-clear-btn:hover {
+  background: #343541;
+}
+
+/* ==========================================
+   Messages
+========================================== */
+
+.agent-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 30px 20px 120px;
+}
+
+.agent-message {
+  max-width: 900px;
+  margin: 0 auto 25px;
+
+  display: flex;
+  gap: 15px;
+}
+
+.agent-avatar {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #444;
+  flex-shrink: 0;
+}
+
+.agent-message-content {
+  flex: 1;
+}
+
+.agent-message-name {
+  margin-bottom: 6px;
+
+  font-size: 14px;
+  font-weight: bold;
+  color: #bdbdbd;
+}
+
+.agent-message-text {
+  white-space: pre-wrap;
+
+  font-size: 16px;
+  line-height: 1.7;
+
+  color: white;
+}
+
+.user-message .agent-message-text {
+  color: #ffffff;
+}
+
+/* ==========================================
+   Typing
+========================================== */
+
+.agent-typing {
+  display: flex;
+  gap: 5px;
+
+  padding: 12px 0;
+}
+
+.agent-typing span {
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: #aaa;
+
+  animation: typing 1.4s infinite ease-in-out;
+}
+
+.agent-typing span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.agent-typing span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes typing {
+  0%,
+  60%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+
+  30% {
+    transform: translateY(-5px);
+    opacity: 1;
+  }
+}
+
+/* ==========================================
+   Input
+========================================== */
+
+.agent-input-form {
+  position: fixed;
+  bottom: 0;
+
+  left: 250px;
+  right: 0;
+
+  display: flex;
+  gap: 10px;
+
+  padding: 20px;
+
+  background: #202123;
+  border-top: 1px solid #444;
+}
+
+.agent-input-form textarea {
+  flex: 1;
+
+  padding: 14px;
+
+  border: 1px solid #555;
+  border-radius: 8px;
+
+  background: #343541;
+  color: white;
+
+  font-size: 16px;
+
+  resize: none;
+  outline: none;
+}
+
+.agent-input-form textarea:focus {
+  border-color: #777;
+}
+
+.agent-input-form button {
+  width: 120px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #2e7d32;
+  color: white;
+
+  font-size: 16px;
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.agent-input-form button:hover {
+  background: #256628;
+}
+
+.agent-input-form button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ==========================================
+   Mobile
+========================================== */
+
+@media (max-width: 768px) {
+
+  .agent-header h1 {
+    font-size: 23px;
+  }
+
+  .agent-header p {
+    font-size: 14px;
+  }
+
+  .agent-clear-btn {
+    position: static;
+    margin-top: 15px;
+  }
+
+  .agent-input-form {
+    left: 0;
+    padding: 12px;
+  }
+
+  .agent-input-form button {
+    width: 90px;
+  }
+
+  .agent-message {
+    gap: 10px;
+  }
+
+}
