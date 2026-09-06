@@ -14,6 +14,7 @@ import DietPlanner from "./pages/DietPlanner";
 import Translation from "./pages/Translation";
 import Agent from "./pages/Agent";
 import ChatHistory from "./pages/ChatHistory";
+import DiseasePrediction from "./pages/DiseasePrediction";
 
 import ProtectedRoute from "./components/ProtectedRoute";
 
@@ -133,6 +134,15 @@ function App() {
   element={
     <ProtectedRoute>
       <ChatHistory />
+    </ProtectedRoute>
+  }
+/>
+
+<Route
+  path="/disease-prediction"
+  element={
+    <ProtectedRoute>
+      <DiseasePrediction />
     </ProtectedRoute>
   }
 />

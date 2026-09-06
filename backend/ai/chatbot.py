@@ -20,7 +20,7 @@ client = Groq(api_key=GROQ_API_KEY)
 def ask_ai(question: str):
     try:
         response = client.chat.completions.create(
-            model="llama-3.3-70b-versatile",
+            model="openai/gpt-oss-20b",
             messages=[
                 {
                     "role": "system",
@@ -35,7 +35,7 @@ def ask_ai(question: str):
                 }
             ],
             temperature=0.7,
-            max_tokens=500
+            max_tokens=2000
         )
 
         return response.choices[0].message.content

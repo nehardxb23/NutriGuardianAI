@@ -48,6 +48,7 @@ app.add_middleware(
 app.include_router(auth_router)
 app.include_router(tracking_router)
 app.include_router(chatbot_router)
+
 app.include_router(diet_router)
 app.include_router(chat_history_router)
 app.include_router(translation_router)

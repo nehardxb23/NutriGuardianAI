@@ -152,7 +152,7 @@ function Dashboard() {
 
             <button
               className="sustainability-btn"
-              onClick={() => navigate("/disease-prediction")}
+              onClick={() => window.location.href = "http://localhost:5174/"}
             >
               🩺 Disease Risk Prediction
             </button>
